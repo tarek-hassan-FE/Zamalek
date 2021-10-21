@@ -1,9 +1,17 @@
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      Zamalek
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Navbar selected="home" />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
